@@ -1,0 +1,26 @@
+{
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "containerDefinitions": [
+    {
+      "name": "nodetask",
+      "image": "soumenbiswas212/jenkins-ecs-node:v_%BUILD_NUMBER%",
+      "memory": 256,
+      "cpu": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 4000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "volumes": [],
+  "networkMode": "awsvpc",
+  "placementConstraints": [],
+  "family": "nodetask",
+  "memory": "512",
+  "cpu": "256"
+}
