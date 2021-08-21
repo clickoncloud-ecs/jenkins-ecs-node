@@ -4,7 +4,7 @@ var port = 4000
 
 var server = http.createServer(function (request, response) {
   response.writeHead(200, {'Content-Type': 'text/plain'})
-  response.end('I Got Sucess on CodepipeLine\n')
+  response.end('I Got ecs success\n')
 })
 
 server.listen(port)
